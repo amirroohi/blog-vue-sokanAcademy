@@ -1,0 +1,36 @@
+.recommended-wrapper{
+    background: linear-gradient(180deg, rgba(228, 225, 243, 0.1) 0%, rgba(228, 225, 243, 0.8) 50%, rgba(228, 225, 243, 0.1) 100%);
+    .recommended{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        border-top: 2px solid $grayscale-2;
+        overflow: hidden;
+        &__header{
+            position: relative;
+            h2{
+                @include font(IranYekanX,28px,900);
+                padding-left:12px;
+                padding-right:12px;
+            }
+            &::after,&::before{
+                position: absolute;
+                top: 15px;
+                content: "";
+                display: inline-block;
+                width: 24px;
+                height: 6px;
+                background-color: $secondary1-20;
+                border-radius: 4px;
+            }
+            &::after{
+                left: -24px;
+            }
+            &::before{
+                right: -24px;
+            }
+        }
+        &__articles-slider{
+            width: 99.5%;
+        }
+    }
+}

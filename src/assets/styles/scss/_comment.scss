@@ -1,0 +1,74 @@
+.comment{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: $secondary2-100;
+    &__header{
+        @include font(IranYekanX,28px,900);
+        padding-left:12px;
+        padding-right:12px;
+        position: relative;
+    }
+    &__header::after,&__header::before{
+        position: absolute;
+        top: 15px;
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 6px;
+        background-color: $secondary1-20;
+        border-radius: 4px;
+    }
+    &__header::after{
+        left: -24px;
+    }
+    &__header::before{
+        right: -24px;
+    }
+    &__form{
+        row-gap: 20px;
+        padding: 20px;
+        border: 2px solid $grayscale-2;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 800px;
+        label{
+            @include font(IranSansX,16px,700);
+            line-height: 2;
+            span{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: $secondary1-100;
+                border-radius: 3px;
+                margin-left: 16px;
+            }
+        }
+        textarea{
+            outline: none;
+            border: none;
+            background-color: $grayscale-2;
+            border-radius: 12px;
+            height: 128px;
+            resize: none;
+            padding: 8px 16px 12px;
+            &::placeholder{
+                color: $grayscale-6;
+            }
+        }
+        button{
+            outline: none;
+            border: 1px solid $secondary2-100;
+            width: fit-content;
+            left: 0;
+            span{
+                @include font(IranSansX,16px,500);
+            }
+        }
+        button[disabled]{
+            background-color: $grayscale-4;
+            color: $grayscale-0;
+        }
+        
+        
+    }
+}

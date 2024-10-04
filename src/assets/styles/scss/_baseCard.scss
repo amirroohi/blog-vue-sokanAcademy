@@ -1,0 +1,79 @@
+.card{
+    height: 236px;
+    border: 2px solid $grayscale-2;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    @include for-phone-only {    
+        height: 210px;
+    }
+    @include for-desktop-up {
+        height: 236px;
+    }
+    .card-img-top{
+        height: inherit;
+        object-fit: cover;
+    }
+    .card-body{
+        width: 100%;
+        padding: 16px 18px 20px;
+        line-height: 2;
+        position: absolute;
+        top: 55%;
+        background-color: rgba($color: $grayscale-0, $alpha: 0.8);
+        @include font(IranSansX,18px,700);
+        .card-text{
+            display: inline-block;
+            color: $secondary2-100;
+            margin: 0;
+            overflow: hidden;
+            height: 4.5em;
+            // text truncate
+            -webkit-line-clamp: 2;
+            line-clamp: 2   ;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        .course-creater{
+            display: flex;
+            @include font(IranSansX,14px,700);
+            @include for-phone-only {    
+                margin: 4px 0 20px;
+            }
+            margin: 4px 0 46px;
+            .profile-creater{
+                img{
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            .name-creater{
+                margin-right: 5px;
+            }
+        }
+        .course-details{
+            @include font(IranSansX,14px,500);
+            height: 40px;
+            .course-spec{
+                div{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        margin: 0 8px 0 0;
+                        text-wrap: nowrap;
+                    }
+                }
+                .icon{
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+.card:hover{
+    .card-body{
+        top: 0;
+    }
+}

@@ -1,0 +1,49 @@
+@import "~bootstrap/scss/bootstrap";
+// import modules
+@import "variables";
+@import "fonts";
+
+// mixins
+@mixin font($fontFamily,$fontSize,$fontWeight){
+    font-family: $fontFamily;
+    font-size:$fontSize ;
+    font-weight: $fontWeight;
+}
+
+@mixin headerLine{
+    content: url(../../icons/Line.svg);
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    width: 16px;
+    height: 4px;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 768px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1000px) { @content; }
+}
+
+*,*::after,*::before{
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+#app{
+    @include font(IranSansX,14px,500);
+    color: $secondary2-100;    
+    a{
+        text-decoration: none;
+        color: $secondary2-100;
+    }
+}
+// imports
+@import "header";
+@import "hero";
+@import "main";
+@import "recommended";
+@import "baseCard";
+@import "authorInfo";
+@import "comment";
+@import "footer";

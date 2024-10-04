@@ -1,0 +1,125 @@
+main{
+    padding-bottom: 40px;
+    .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        &__content{
+            display: flex;
+            flex-direction: column;
+            row-gap: 60px;
+            @include for-phone-only{
+                row-gap: 40px;
+            }
+            h2,h3{
+                @include font(IranYekanX,28px,900);
+                line-height: 2;
+                margin-bottom: 0;
+                @include for-phone-only{
+                    @include font(IranYekanX,24px,900);                
+                }
+            }
+            p,li{
+            @include font(IranSansX,16px,500);
+            line-height: 2;
+            margin-bottom: 12px;
+            list-style: disc;
+            }
+            ul{
+                padding-right: 24px;
+            }
+            .image{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .badge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border-radius: 8px;
+            height: 37px;
+            color: $secondary2-100;
+            background-color: $grayscale-2;
+            @include font(IranSansX,14px,500);
+        }
+        .btn{
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid $secondary2-100;
+            &:hover{
+                background-color: $grayscale-2;
+            }
+            span{
+                text-wrap: nowrap;
+            }
+        }
+    }
+    .sidebar{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 50px;
+        height: 100%;
+        @include for-phone-only{
+            display: none;
+        }
+        .sidebar__content{
+            width: 368px;
+            .sidebar__list{
+                height: 300px;
+                padding: 20px;
+                h3{
+                    @include font(IranYekanX,18px,900);
+                    span{
+                        margin-right: 6px;
+                    }
+                }
+                ul{
+                padding: 20px 0 0 0;
+                    li{
+                        position: relative;
+                        cursor: pointer;
+                        a{
+                            display: inline-block;
+                            padding: 12px 24px 12px 12px; 
+                            border-radius: 12px;
+                            @include font(IranSansX,14px,500);
+                            line-height: 2;
+                            width: 100%;
+                            &::before{
+                                position: absolute;
+                                content: "";
+                                width: 2px;
+                                top: 18px;
+                                right: 12px;
+                                height: 13px;
+                                border-radius: 12px;
+                                background-color: $secondary1-100;
+                            }
+                            &:hover{
+                                background-color: $grayscale-2;
+                            }
+                        }
+                        .active{
+                            background-color: $grayscale-2;
+                        }                        
+                    }
+                }
+            }   
+            .sidebar__view{
+                padding: 20px;
+                div{
+                    span{
+                        @include font(IranSansX,16px,700);
+                        line-height: 2; 
+                    }
+                }
+            }
+        }   
+    }
+}

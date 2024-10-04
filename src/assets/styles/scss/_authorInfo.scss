@@ -1,0 +1,48 @@
+.authorInfo{
+    height: fit-content;
+    width: 100%;
+    max-width: 750px;
+    border: 2px solid $grayscale-2;
+    padding: 24px ;
+    border-radius: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 80px auto;
+    &__image {
+        img {
+            border-radius: 12px;
+            width: 145px;
+            height: 145px;
+        }
+    }
+    &__description{
+        overflow: hidden;
+
+        h4{
+            @include font(IranSansX,16px,700);
+        }
+        p{
+            font-size: 14px;
+            line-height: 2;
+            color: $grayscale-6;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            @include for-phone-only{
+                line-clamp: 3;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+        button{
+            border: 1px solid $secondary2-100;
+            font-size: 14px;
+            &:hover{
+                background-color: $grayscale-2;
+            }
+        }
+    }
+}

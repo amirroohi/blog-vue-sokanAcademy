@@ -1,0 +1,55 @@
+
+    .header{
+        .nav__list{
+            .nav{
+                .nav-item{
+                    position: relative;
+                    .nav-link{
+                        color: $secondary2-100;
+                    }
+                    .nav-link:active{
+                        color: $secondary1-100 !important;
+                    }
+                    .nav-link:hover{
+                        color: $secondary1-100 !important;
+                    }
+                    .nav-link:hover::after{
+                        position: absolute;
+                        bottom: -20px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        background-color: $secondary1-100;
+                        width: 20%;
+                        border-radius: 10px;
+                        content: "";
+                        height: 2px;
+                        transition: all 0.5s;
+                    }
+                    .nav-link:focus{
+                        color:$secondary1-100 !important;
+                    }
+                    .nav-link:focus::after{
+                        position: absolute;
+                        bottom: -20px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        background-color: $secondary1-100;
+                        width: 20%;
+                        border-radius: 10px;
+                        content: "";
+                        height: 2px;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+        .header__login{
+            button{
+                span{
+                    @include font(IranSansX,14px,500);
+                }
+            }
+        }
+    }
